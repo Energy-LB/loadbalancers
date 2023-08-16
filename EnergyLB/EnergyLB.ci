@@ -1,0 +1,8 @@
+module EnergyLB {
+  extern module CentralLB;
+  initnode void lbinit (void);
+
+  group [migratable] EnergyLB : CentralLB {
+    entry void EnergyLB(const CkLBOptions &);
+  };
+};

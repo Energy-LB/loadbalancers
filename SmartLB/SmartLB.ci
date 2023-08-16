@@ -1,0 +1,8 @@
+module SmartLB {
+  extern module CentralLB;
+  initnode void lbinit (void);
+
+  group [migratable] SmartLB : CentralLB {
+    entry void SmartLB(const CkLBOptions &);
+  };
+};

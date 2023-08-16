@@ -1,0 +1,8 @@
+module FirstLB {
+  extern module CentralLB;
+  initnode void lbinit (void);
+
+  group [migratable] FirstLB : CentralLB {
+    entry void FirstLB(const CkLBOptions &);
+  };
+};
